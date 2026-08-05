@@ -15,7 +15,7 @@ img, svg {
   width: 100%;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-
+   // padding-bottom: 10px;
   @include respond(lg) {
     padding-left: 2rem;
     padding-right: 2rem;

@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { Component, HostListener, OnInit, signal } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
+import { MatTooltipModule } from "@angular/material/tooltip";
 import { ScrollSpyService } from "../../shared/services/scroll-spy.service";
 import { NAV_LINKS } from "../../shared/data/portfolio-data";
 import { FileDownloadService } from "../../shared/services/file-download.service";
@@ -9,15 +10,16 @@ import { APP_Logo } from "../../shared/file-data/files-data";
 @Component({
   selector: "app-navbar",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatTooltipModule],
   templateUrl: "./navbar.component.html",
   styleUrls: ["./navbar.component.scss"],
+ 
 })
 export class NavbarComponent implements OnInit {
   readonly navLinks = NAV_LINKS;
   readonly isScrolled = signal(false);
   readonly isMenuOpen = signal(false);
-public APP_Logo = APP_Logo;
+  public APP_Logo = APP_Logo;
   constructor(
     public scrollSpy: ScrollSpyService,
     public themeService: ThemeService,
@@ -35,11 +37,25 @@ public APP_Logo = APP_Logo;
     this.clearHash();
     this.syncActiveSectionFromRoute();
     this.scrollSpy.observeSections(this.navLinks.map((link) => link.fragment));
+    this.updateScrolledState();
   }
 
-  @HostListener("window:scroll")
+  @HostListener('window:scroll')
   onWindowScroll(): void {
-    this.isScrolled.set(window.scrollY > 40);
+    this.updateScrolledState();
+  }
+
+  private updateScrolledState(): void {
+    const scrollTop =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      (document.scrollingElement ? document.scrollingElement.scrollTop : 0) ||
+      0;
+
+    const scrolled = scrollTop > 0;
+    this.isScrolled.set(scrolled);
+    console.debug('Navbar scrollTop:', scrollTop, 'scrolled:', scrolled);
   }
 
   toggleMenu(): void {

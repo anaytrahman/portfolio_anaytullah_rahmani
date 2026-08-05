@@ -1,0 +1,34 @@
+@use "variables" as *;
+
+// Lite mode-specific styles. Add CSS here that should only apply when the
+// light theme is active. The rest of the app continues to use the shared
+// default styles from the other modules.
+
+:root[data-theme="light"] {
+  --color-bg: #f5f7fb;
+  --color-bg-alt: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f5f9;
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-subtle: #64748b;
+  --form-control-bg: rgba(15, 23, 42, 0.04);
+  --form-control-focus-bg: rgba(15, 23, 42, 0.08);
+  --navbar-bg-scrolled: rgba(255, 255, 255, 0.95);
+  --navbar-text: #0f172a;
+}
+
+:root[data-theme="light"] .app-navbar--scrolled {
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.08);
+}
+
+:root[data-theme="light"] {
+  .info-card , .skill-card , .surface-card{
+    background: unset;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;   
+  }
+  .app-navbar{
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 60%), #fffffffa;
+  }
+}
