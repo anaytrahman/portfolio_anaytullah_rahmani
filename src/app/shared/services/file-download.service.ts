@@ -6,18 +6,19 @@ import { APP_FILES } from '../constants/constants';
 })
 export class FileDownloadService {
 
+   public errorMessage = 'An error occurred while fetching the data. Please retry.';
   async download(filePath: string, fileName?: string): Promise<void> {
     const trimmedPath = filePath?.trim();
     const lastSegment = trimmedPath?.split('/').pop();
     const hasFileName = !!lastSegment && /\.[^\./]+$/.test(lastSegment);
 
     if (!trimmedPath || !hasFileName) {
-      throw new Error('CV is not available');
+      throw new Error(this.errorMessage);
     }
 
     const response = await fetch(trimmedPath, { method: 'HEAD' });
     if (!response.ok) {
-      throw new Error('CV is not available');
+      throw new Error(this.errorMessage);
     }
 
     const link = document.createElement('a');
@@ -35,12 +36,12 @@ export class FileDownloadService {
     const { RESUME, Name } = APP_FILES ?? {};
 
     if (!RESUME || !Name) {
-      alert('CV is not available');
+      alert(this.errorMessage);
       return;
     }
 
     void this.download(RESUME, Name).catch((error: unknown) => {
-      const message = error instanceof Error ? error.message : 'CV is not available';
+      const message = error instanceof Error ? error.message : this.errorMessage;
       alert(message);
     });
   }
