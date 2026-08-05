@@ -1,8 +1,20 @@
 <nav class="navbar navbar-expand-lg fixed-top app-navbar" [class.app-navbar--scrolled]="isScrolled()">
   <div class="container">
-    <a class="navbar-brand app-navbar__brand" role="button" (click)="scrollToSection('home')">
-      <img class="app-navbar__logo" [src]="APP_Logo.title_logo" alt="App title logo" />
-    </a>
+    <div class="app-navbar__brand-group">
+      <a class="navbar-brand app-navbar__brand" role="button" (click)="scrollToSection('home')">
+        <img class="app-navbar__logo" [src]="APP_Logo.title_logo" alt="App title logo" />
+      </a>
+
+      <button
+        type="button"
+        class="app-navbar__theme-toggle btn-outline-glow"
+        aria-label="Toggle theme mode"
+        (click)="themeService.toggleTheme()"
+      >
+        <i class="fa-solid" [ngClass]="themeService.theme() === 'dark' ? 'fa-sun' : 'fa-moon'"> </i>
+        {{ themeService.theme() === 'dark' ? 'Lite mode' : 'Dark mode' }}
+      </button>
+    </div>
 
     <button
       class="navbar-toggler app-navbar__toggler"

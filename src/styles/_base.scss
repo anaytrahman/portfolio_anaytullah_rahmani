@@ -11,7 +11,40 @@ html {
 body {
   margin: 0;
   background: $color-bg;
+  color: $color-text;
   min-height: 100vh;
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #0b1120;
+  --color-bg-alt: #0e1526;
+  --color-surface: #111827;
+  --color-surface-hover: #161f30;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-text-subtle: #64748b;
+  --form-control-bg: rgba(255, 255, 255, 0.03);
+  --form-control-focus-bg: rgba(255, 255, 255, 0.05);
+  --navbar-bg-scrolled: rgba(11, 17, 32, 0.85);
+}
+
+:root[data-theme='light'] {
+  --color-bg: #f5f7fb;
+  --color-bg-alt: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f5f9;
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-subtle: #64748b;
+  --form-control-bg: rgba(15, 23, 42, 0.04);
+  --form-control-focus-bg: rgba(15, 23, 42, 0.08);
+  --navbar-bg-scrolled: rgba(255, 255, 255, 0.95);
+}
+
+:root[data-theme='light'] .app-navbar--scrolled {
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.08);
 }
 
 a {

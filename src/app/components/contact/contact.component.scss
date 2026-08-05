@@ -38,14 +38,14 @@
   }
 
   .form-control {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--form-control-bg);
     border: 1px solid $color-border;
     color: $color-text;
     border-radius: $radius-sm;
     padding: 0.7rem 0.9rem;
 
     &:focus {
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--form-control-focus-bg);
       border-color: $color-primary;
       box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
       color: $color-text;

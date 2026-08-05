@@ -4,6 +4,7 @@ import { NavigationEnd, Router } from "@angular/router";
 import { ScrollSpyService } from "../../shared/services/scroll-spy.service";
 import { NAV_LINKS } from "../../shared/data/portfolio-data";
 import { FileDownloadService } from "../../shared/services/file-download.service";
+import { ThemeService } from "../../shared/services/theme.service";
 import { APP_Logo } from "../../shared/file-data/files-data";
 @Component({
   selector: "app-navbar",
@@ -19,6 +20,7 @@ export class NavbarComponent implements OnInit {
 public APP_Logo = APP_Logo;
   constructor(
     public scrollSpy: ScrollSpyService,
+    public themeService: ThemeService,
     private _fileDownloadService: FileDownloadService,
     private _router: Router,
   ) {
