@@ -115,65 +115,47 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    name: "Analytics Dashboard",
+    name: "PromptToEdit - Get prompt to edit your photos",
     description:
-      "A real-time analytics dashboard with interactive charts, role-based access, and dark-mode support.",
-    image: "assets/images/project-placeholder-1.jpg",
-    techStack: ["Angular", "NgRx", "Chart.js"],
-    liveUrl: "https://your-project-link.example.com",
-    githubUrl: "https://github.com/your-username/analytics-dashboard",
+      "A web application that generates AI-powered prompts for photo editing, allowing users to enhance their images with ease.",
+    image: "./../../assets/projects-img/prompttoedit.png",
+    techStack: ["Angular", "TypeScript", "RxJS", "Bootstrap", "SCSS"],
+    liveUrl: "https://prompto-edit.vercel.app/",
+    githubUrl: "https://github.com/anaytrahman/promptoEdit",
     featured: true,
   },
   {
-    id: 2,
-    name: "E-Commerce Storefront",
+     id: 10,
+    name: "Static UI/ UX for Travel Website",
     description:
-      "A fully responsive storefront with cart management, filters, and a Stripe-ready checkout flow.",
-    image: "assets/images/project-placeholder-2.jpg",
-    techStack: ["Angular", "Bootstrap", "REST API"],
-    liveUrl: "https://your-project-link.example.com",
-    githubUrl: "https://github.com/your-username/ecommerce-storefront",
+      "A static UI/UX design for a travel website, showcasing a visually appealing and user-friendly interface for travel-related content.",
+    image: "./../../assets/projects-img/olive_travel_boooking.png",
+    techStack: ["HTML", "CSS"],
+    liveUrl: "https://anaytrahman.github.io/olive-ui/",
+    githubUrl: "https://github.com/anaytrahman/olive-ui/settings/pages",
+
+  },
+  {
+    id: 2,
+    name: "Sonam Wanchuk Support DP",
+    description:
+      "A web application that allows users to generate your picture with I support Sonam  to set profile pictures of Sonam Wanchuk, a popular figure, as their display picture on social media platforms.",
+     image: "./../../assets/projects-img/sonamWang.png",
+    techStack: ["Angular", "Bootstrap", "SCSS", "RxJS", "TypeScript"],
+    liveUrl: "https://sonam-wanchuk-support-dp.vercel.app/",
+    githubUrl: "https://github.com/anaytrahman/Sonam_Wanchuk_Support_Dp",
   },
   {
     id: 3,
-    name: "Task Management App",
+    name: "Travel Basic App",
     description:
-      "A Kanban-style task manager with drag-and-drop boards, notifications, and team workspaces.",
-    image: "assets/images/project-placeholder-3.jpg",
-    techStack: ["Angular", "Signals", "SCSS"],
-    liveUrl: "https://your-project-link.example.com",
-    githubUrl: "https://github.com/your-username/task-manager",
+      "A simple travel planning app with destination listings and basic itinerary management.",
+    image: "./../../assets/projects-img/travelblm.png",
+    techStack: ["React", "HTML", "SCSS"],
+    liveUrl: "https://travel-bloom-rho.vercel.app/#",
+    githubUrl: "https://github.com/anaytrahman/TravelBloom",
   },
-  {
-    id: 4,
-    name: "Weather Forecast App",
-    description:
-      "A location-aware weather app with animated conditions and a 7-day forecast view.",
-    image: "assets/images/project-placeholder-4.jpg",
-    techStack: ["Angular", "RxJS", "REST API"],
-    liveUrl: "https://your-project-link.example.com",
-    githubUrl: "https://github.com/your-username/weather-app",
-  },
-  {
-    id: 5,
-    name: "Recipe Discovery Platform",
-    description:
-      "A recipe search platform with saved favorites, ingredient filters, and print-friendly recipe pages.",
-    image: "assets/images/project-placeholder-5.jpg",
-    techStack: ["Angular", "Bootstrap", "TypeScript"],
-    liveUrl: "https://your-project-link.example.com",
-    githubUrl: "https://github.com/your-username/recipe-app",
-  },
-  {
-    id: 6,
-    name: "Personal Finance Tracker",
-    description:
-      "A budgeting tool with animated charts, category breakdowns, and monthly spending goals.",
-    image: "assets/images/project-placeholder-6.jpg",
-    techStack: ["Angular", "NgRx", "Chart.js"],
-    liveUrl: "https://your-project-link.example.com",
-    githubUrl: "https://github.com/your-username/finance-tracker",
-  },
+  
 ];
 
 export const SERVICES: ServiceOffering[] = [

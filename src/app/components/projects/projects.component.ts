@@ -11,6 +11,6 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  public hiddenProj = false; 
+  public hiddenProj = true; 
   readonly projects = PROJECTS;
 }
