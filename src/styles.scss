@@ -13,6 +13,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.cdk-overlay-container,
+.mat-tooltip {
+  z-index: 99999 !important;
+}
 
 .navbar-brand {
   .brand-name-l {

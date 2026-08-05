@@ -74,12 +74,21 @@
   }
 
   &__toggler {
+    position: relative;
+    z-index: 1101;
     background: transparent;
     border: 1px solid var(--color-border);
     border-radius: $radius-sm;
     color: var(--navbar-text);
     width: 44px;
     height: 40px;
+
+    i {
+      font-size: 1.1rem;
+      color: inherit;
+      display: inline-block;
+      line-height: 1;
+    }
 
     &:focus {
       box-shadow: none;
