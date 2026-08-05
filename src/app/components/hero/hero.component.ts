@@ -2,7 +2,6 @@ import { CommonModule } from "@angular/common";
 import { Component, OnDestroy, OnInit, signal } from "@angular/core";
 import { Router } from "@angular/router";
 import { SOCIAL_LINKS } from "../../shared/data/portfolio-data";
-import { APP_FILES } from "../../shared/constants/constants";
 import { FileDownloadService } from "../../shared/services/file-download.service";
 
 @Component({
@@ -75,7 +74,6 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
   /**download resume */
   downloadResume(): void {
-   
-    this._fileDownloadService.download(APP_FILES.RESUME, "Anayt_Resume.pdf");
+    this._fileDownloadService.downloadResume();
   }
 }

@@ -3,7 +3,6 @@ import { Component, HostListener, OnInit, signal } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 import { ScrollSpyService } from "../../shared/services/scroll-spy.service";
 import { NAV_LINKS } from "../../shared/data/portfolio-data";
-import { APP_FILES } from "../../shared/constants/constants";
 import { FileDownloadService } from "../../shared/services/file-download.service";
 import { APP_Logo } from "../../shared/file-data/files-data";
 @Component({
@@ -78,7 +77,6 @@ public APP_Logo = APP_Logo;
 
   /**download resume */
   downloadResume(): void {
-  
-     this._fileDownloadService.download(APP_FILES.RESUME, "Anayt_Resume.pdf");
+    this._fileDownloadService.downloadResume();
   }
 }
