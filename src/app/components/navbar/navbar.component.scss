@@ -1,11 +1,16 @@
-@use '../../../styles/variables' as *;
-@use '../../../styles/mixins' as *;
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 
 .app-navbar {
   padding: 1.25rem 0;
   //background: radial-gradient(circle at top, rgba(59, 130, 246, 0.25), transparent 60%);
-   background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 60%), #111a2e;
-  transition: background $transition-base, padding $transition-base, box-shadow $transition-base;
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 60%),
+    #111a2e;
+  transition:
+    background $transition-base,
+    padding $transition-base,
+    box-shadow $transition-base;
 
   &--scrolled {
     padding: 0.75rem 0;
@@ -14,12 +19,12 @@
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 
-    & .app-navbar__theme-toggle , .app-navbar__link, .app-navbar__resume {
+    & .app-navbar__theme-toggle,
+    .app-navbar__link,
+    .app-navbar__resume {
       color: #d2d5dd !important;
     }
-  
-    
-      }
+  }
 
   &__brand-group {
     display: flex;
@@ -35,7 +40,8 @@
 
     & .app-navbar__logo {
       display: block;
-      width: 150px;
+      //width: 150px;
+      width: 50px;
       object-fit: contain;
     }
   }
@@ -52,7 +58,10 @@
     border: 1px solid var(--color-border);
     color: var(--navbar-text);
     background: transparent;
-    transition: background $transition-fast, border-color $transition-fast, color $transition-fast;
+    transition:
+      background $transition-fast,
+      border-color $transition-fast,
+      color $transition-fast;
 
     i {
       font-size: 0.95rem;
@@ -72,7 +81,9 @@
     width: 44px;
     height: 40px;
 
-    &:focus { box-shadow: none; }
+    &:focus {
+      box-shadow: none;
+    }
   }
 
   &__collapse {
@@ -126,7 +137,7 @@
     transition: color $transition-fast;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -151,7 +162,7 @@
   }
 }
 
-:root[data-theme='light'] .app-navbar:not(.app-navbar--scrolled) {
+:root[data-theme="light"] .app-navbar:not(.app-navbar--scrolled) {
   .app-navbar__link {
     color: var(--navbar-text);
   }
@@ -167,8 +178,9 @@
     color: #d2d5dd !important;
   }
   // .app-navbar__theme-toggle[_ngcontent-ng-c3033899813] {
-   
+
   //   color: #d2d5dd;
-	// }
+  // }
 }
+
 

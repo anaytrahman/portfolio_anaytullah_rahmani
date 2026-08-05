@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-lg fixed-top app-navbar" [ngClass]="{ 'app-navbar--scrolled': isScrolled() }">
+<nav class="navbar navbar-expand-lg fixed-top app-navbar" [class.app-navbar--scrolled]="isScrolled()">
   <div class="container">
     <div class="app-navbar__brand-group">
       <a class="navbar-brand app-navbar__brand" role="button" (click)="scrollToSection('home')">
-        <img class="app-navbar__logo" [src]="APP_Logo.title_logo" alt="App title logo" />
+        <img class="app-navbar__logo" [src]="APP_Logo.logo" alt="App title logo" />
+        <span class="brand-name-l">Anayt</span><span class="tech">Tech</span>
       </a>
 
       <!-- <button
