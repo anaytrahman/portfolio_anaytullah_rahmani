@@ -1,0 +1,18 @@
+.contact-card {
+    gap: 0.5rem !important;
+  .contact-card__header {
+    h3 {
+    }
+  }
+  .contact-details{
+    gap: 1px !important;
+    .contact-detail {
+     .btn-email , .btn-whatsapp {
+      width: 70% !important;
+      }
+      h3{
+        margin: 0 !important;
+      }
+    }
+  }
+}
