@@ -24,16 +24,21 @@
 }
 
 :root[data-theme="light"] {
-  .info-card , .skill-card , .surface-card{
+  .info-card,
+  .skill-card,
+  .surface-card {
     background: unset;
-   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;   
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
-  .app-navbar{
-    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 60%), #c9d6ed;
+  .app-navbar {
+    background:
+      radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 60%),
+      #c9d6ed;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .brand-name-l {
-   color: #000;
-  
-}
+    color: #000;
+  }
+  .project-card {
+    background: #ffffff;}
 }
