@@ -50,76 +50,64 @@
       </div>
 
       <div class="col-12 col-lg-7" appScrollReveal>
-        <form class="contact-form surface-card" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
-          <div class="row g-3">
-            <div class="col-12 col-sm-6">
-              <label class="form-label" for="name">Name</label>
-              <input
-                id="name"
-                type="text"
-                class="form-control"
-                formControlName="name"
-                [class.is-invalid]="submitted() && f['name'].invalid"
-                placeholder="Your name"
-              />
-              <div class="invalid-feedback" *ngIf="submitted() && f['name'].invalid">
-                Please enter your name.
+        <div class="contact-card surface-card h-100">
+          <div class="contact-card__header">
+            <h3>Contact Options</h3>
+            <p>Choose the best way to reach me for projects, quotes, or detailed discussions.</p>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-detail__meta">
+                <div class="contact-detail__icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <h4>WhatsApp</h4>
+                  <span>Quick replies for short project enquiries and clarifications.</span>
+                </div>
               </div>
+              <a
+                class="btn-whatsapp w-100"
+                href="https://wa.me/917991168053?text=Hi%20Anayt%2C%20I%20found%20your%20portfolio%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                Chat on WhatsApp
+              </a>
+              <!-- <div class="contact-detail__info">
+                <span>Available on WhatsApp</span>
+                <strong>+91 79911 68053</strong>
+              </div> -->
             </div>
 
-            <div class="col-12 col-sm-6">
-              <label class="form-label" for="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                class="form-control"
-                formControlName="email"
-                [class.is-invalid]="submitted() && f['email'].invalid"
-                placeholder="you&#64;example.com"
-              />
-              <div class="invalid-feedback" *ngIf="submitted() && f['email'].invalid">
-                Please enter a valid email.
+            <div class="contact-detail">
+              <div class="contact-detail__meta">
+                <div class="contact-detail__icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <span>Send a detailed brief, attachments, or longer project notes.</span>
+                </div>
               </div>
-            </div>
-
-            <div class="col-12">
-              <label class="form-label" for="subject">Subject</label>
-              <input
-                id="subject"
-                type="text"
-                class="form-control"
-                formControlName="subject"
-                [class.is-invalid]="submitted() && f['subject'].invalid"
-                placeholder="What's this about?"
-              />
-              <div class="invalid-feedback" *ngIf="submitted() && f['subject'].invalid">
-                Please enter a subject.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label class="form-label" for="message">Message</label>
-              <textarea
-                id="message"
-                rows="5"
-                class="form-control"
-                formControlName="message"
-                [class.is-invalid]="submitted() && f['message'].invalid"
-                placeholder="Tell me a bit about your project..."
-              ></textarea>
-              <div class="invalid-feedback" *ngIf="submitted() && f['message'].invalid">
-                Message should be at least 10 characters.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <button type="submit" class="btn-gradient w-100 w-sm-auto" [disabled]="isSubmitting()">
-                <span *ngIf="!isSubmitting()"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
-                <span *ngIf="isSubmitting()"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>
-              </button>
+              <a
+                class="btn-email w-100"
+                href="mailto:anaytrahmani1@gmail.com?subject=AnaytTech%20Project%20Inquiry"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                Send Email
+              </a>
+              <!-- <div class="contact-detail__info">
+                <span>Send to</span>
+                <strong>anaytrahmani1@gmail.com</strong>
+              </div> -->
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
