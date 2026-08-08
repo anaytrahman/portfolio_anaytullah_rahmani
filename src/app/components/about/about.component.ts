@@ -17,9 +17,9 @@ interface InfoItem {
 })
 export class AboutComponent {
   readonly infoItems: InfoItem[] = [
-    { icon: 'fa-solid fa-briefcase', label: 'Experience', value: '4+ Years' },
+    { icon: 'fa-solid fa-briefcase', label: 'Experience', value: '4.6+ Years' },
     { icon: 'fa-solid fa-graduation-cap', label: 'Education', value: 'MCA, Computer Science' },
-    { icon: 'fa-solid fa-user-tie', label: 'Current Role', value: 'Mid-Senior Frontend Developer' },
+    { icon: 'fa-solid fa-user-tie', label: 'Current Role', value: 'Frontend Developer' },
     { icon: 'fa-solid fa-location-dot', label: 'Location', value: 'Delhi, India' },
   ];
 }

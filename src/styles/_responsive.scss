@@ -1,23 +1,38 @@
-@use 'mixins' as *;
+@use "mixins" as *;
 
 // Global responsive safety nets — no fixed widths, no horizontal scroll.
-html, body {
+html,
+body {
   overflow-x: hidden;
   max-width: 100%;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
   height: auto;
 }
 
-.container, .container-fluid {
+.container,
+.container-fluid {
   width: 100%;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-   // padding-bottom: 10px;
+  // padding-bottom: 10px;
   @include respond(lg) {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-detail__meta {
+    gap: 0px !important;
+    flex-direction: column !important;
+    .contact-detail__icon {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5px;
+    }
   }
 }
