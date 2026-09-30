@@ -6,7 +6,7 @@ import { APP_FILES } from '../constants/constants';
 })
 export class FileDownloadService {
 
-   public errorMessage = 'An error occurred while fetching the data. Please retry.';
+   public errorMessage = 'Something went wrong while processing your request.';
   async download(filePath: string, fileName?: string): Promise<void> {
     const trimmedPath = filePath?.trim();
     const lastSegment = trimmedPath?.split('/').pop();
