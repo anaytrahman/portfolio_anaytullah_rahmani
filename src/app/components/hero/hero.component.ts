@@ -15,7 +15,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   readonly socialLinks = SOCIAL_LINKS;
 
   private readonly roles = [
-    "Frontend Developer",
+    "Full Stack Developer",
     "Angular Developer",
     "React Developer",
     "UI/UX Focused Engineer",

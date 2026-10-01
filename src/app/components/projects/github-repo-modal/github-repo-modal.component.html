@@ -1,0 +1,66 @@
+<div class="repo-modal">
+  <!-- Top: project name -->
+  <header class="repo-modal__header">
+    <h2 class="repo-modal__title">{{ project.name }}</h2>
+    <button type="button" class="repo-modal__close-icon" (click)="close()" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </header>
+
+  <!-- Middle: heading -->
+  <section class="repo-modal__body">
+    <div class="repo-modal__icon">
+      <i class="fa-brands fa-github"></i>
+    </div>
+    <h3 class="repo-modal__heading">Open GitHub Repository</h3>
+    <p class="repo-modal__subtext">Choose which codebase you'd like to explore.</p>
+  </section>
+
+  <!-- Bottom: actions -->
+  <footer class="repo-modal__footer">
+    <div class="repo-modal__options">
+      <a
+        class="repo-option"
+        [href]="project.githubFrontEndUrl"
+        target="_blank"
+        rel="noopener"
+        (click)="close()"
+      >
+        <span class="repo-option__icon"><i class="fa-solid fa-display"></i></span>
+        <span class="repo-option__text">
+          <span class="repo-option__label">Frontend Code</span>
+          <span class="repo-option__hint">UI &amp; client application</span>
+        </span>
+        <i class="fa-solid fa-arrow-up-right-from-square repo-option__arrow"></i>
+      </a>
+
+      <a
+        *ngIf="project.isFullStack ==1; else noBackend"
+        class="repo-option"
+        [href]="project.backendGithubUrl"
+        target="_blank"
+        rel="noopener"
+        (click)="close()"
+      >
+        <span class="repo-option__icon"><i class="fa-solid fa-server"></i></span>
+        <span class="repo-option__text">
+          <span class="repo-option__label">Backend Code</span>
+          <span class="repo-option__hint">API &amp; server logic</span>
+        </span>
+        <i class="fa-solid fa-arrow-up-right-from-square repo-option__arrow"></i>
+      </a>
+
+      <ng-template #noBackend>
+        <div class="repo-option repo-option--disabled" aria-disabled="true">
+          <span class="repo-option__icon"><i class="fa-solid fa-server"></i></span>
+          <span class="repo-option__text">
+            <span class="repo-option__label">Backend Code</span>
+            <span class="repo-option__hint">Not available for this project</span>
+          </span>
+        </div>
+      </ng-template>
+    </div>
+
+    <button type="button" class="btn-outline-glow repo-modal__close" (click)="close()">Close</button>
+  </footer>
+</div>

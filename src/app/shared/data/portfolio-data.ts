@@ -246,8 +246,10 @@ export const PROJECTS: Project[] = [
     image: "./../../assets/projects-img/hospozone/home.png",
     techStack: ["Angular", "nodejs", "TypeScript", "RxJS", "Bootstrap", "SCSS", "Claude AI"],
     liveUrl: "https://hospozone-ui.vercel.app/",
-    githubUrl: "https://github.com/anaytrahman/hospozone-ui",
+    githubFrontEndUrl: "https://github.com/anaytrahman/hospozone-ui",
+    backendGithubUrl: "https://github.com/anaytrahman/hospozone-backend",
     featured: true,
+    isFullStack: 1,
   },
   {
     id: 1,
@@ -257,8 +259,10 @@ export const PROJECTS: Project[] = [
     image: "./../../assets/projects-img/prompttoedit.png",
     techStack: ["Angular", "TypeScript", "RxJS", "Bootstrap", "SCSS"],
     liveUrl: "https://prompto-edit.vercel.app/",
-    githubUrl: "https://github.com/anaytrahman/promptoEdit",
+    githubFrontEndUrl: "https://github.com/anaytrahman/promptoEdit",
+    backendGithubUrl: "",
     featured: true,
+    isFullStack: 0
   },
   {
      id: 10,
@@ -268,7 +272,9 @@ export const PROJECTS: Project[] = [
     image: "./../../assets/projects-img/olive_travel_boooking.png",
     techStack: ["HTML", "CSS"],
     liveUrl: "https://anaytrahman.github.io/olive-ui/",
-    githubUrl: "https://github.com/anaytrahman/olive-ui/settings/pages",
+    githubFrontEndUrl: "https://github.com/anaytrahman/olive-ui/settings/pages",
+    featured: true,
+    isFullStack: 0,
 
   },
   {
@@ -279,7 +285,10 @@ export const PROJECTS: Project[] = [
      image: "./../../assets/projects-img/sonamWang.png",
     techStack: ["Angular", "Bootstrap", "SCSS", "RxJS", "TypeScript"],
     liveUrl: "https://sonam-wanchuk-support-dp.vercel.app/",
-    githubUrl: "https://github.com/anaytrahman/Sonam_Wanchuk_Support_Dp",
+    githubFrontEndUrl: "https://github.com/anaytrahman/Sonam_Wanchuk_Support_Dp",
+    backendGithubUrl: "",
+    featured: true,
+    isFullStack: 0
   },
   {
     id: 3,
@@ -289,14 +298,17 @@ export const PROJECTS: Project[] = [
     image: "./../../assets/projects-img/travelblm.png",
     techStack: ["React", "HTML", "SCSS"],
     liveUrl: "https://travel-bloom-rho.vercel.app/#",
-    githubUrl: "https://github.com/anaytrahman/TravelBloom",
+    githubFrontEndUrl: "https://github.com/anaytrahman/TravelBloom",
+    backendGithubUrl: "",
+    featured: true,
+    isFullStack: 0
   },
   
 ];
 
 export const SERVICES: ServiceOffering[] = [
   {
-    title: "Frontend Development",
+    title: "Full Stack Development",
     description:
       "Building fast, maintainable web interfaces from the ground up.",
     icon: "fa-solid fa-code",

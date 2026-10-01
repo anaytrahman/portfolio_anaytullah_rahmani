@@ -19,7 +19,7 @@
               <a [href]="project.liveUrl" target="_blank" rel="noopener" class="btn-icon-circle" aria-label="Visit live project">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
-              <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn-icon-circle" aria-label="View on GitHub">
+              <a [href]="project.githubFrontEndUrl" target="_blank" rel="noopener" class="btn-icon-circle" aria-label="View on GitHub">
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
@@ -38,9 +38,12 @@
               <a [href]="project.liveUrl" target="_blank" rel="noopener" class="btn-outline-glow btn-sm-block">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Project
               </a>
-              <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn-outline-glow btn-sm-block">
+              <a (click)="openGithubModal(project)" class="btn-outline-glow btn-sm-block" role="button">
                 <i class="fa-brands fa-github"></i> GitHub
               </a>
+               <!-- <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn-outline-glow btn-sm-block">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a> -->
             </div>
           </div>
         </article>
