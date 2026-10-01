@@ -29,8 +29,9 @@
             <h3 class="project-card__title">{{ project.name }}</h3>
             <p class="project-card__desc">{{ project.description }}</p>
 
-            <div class="project-card__tags">
-              <span class="tag" *ngFor="let tech of project.techStack">{{ tech }}</span>
+            <div class="project-card__tags sub-skill">
+              <!-- <span class="tag" *ngFor="let tech of project.techStack"><b>{{ tech }}</b></span> -->
+              <span class="tag sub-skill-chip"  *ngFor="let tech of project.techStack">  <b>{{ tech }}</b></span>
             </div>
 
             <div class="project-card__actions">

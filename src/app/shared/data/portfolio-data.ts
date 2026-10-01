@@ -38,26 +38,151 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
-export const SKILLS: Skill[] = [
+export const SKILLS123: Skill[] = [
   { name: "Angular", icon: "fa-brands fa-angular", level: 95 },
-  { name: "React", icon: "fa-brands fa-angular", level: 86 },
-  { name: "TypeScript", icon: "fa-solid fa-code", level: 92 },
+  { name: "React", icon: "fa-brands fa-angular", level: 85 },
+  { name: "TypeScript", icon: "fa-solid fa-code", level: 95 },
   { name: "JavaScript", icon: "fa-brands fa-js", level: 90 },
-  { name: "RxJS", icon: "fa-solid fa-diagram-project", level: 85 },
-  { name: "Signals", icon: "fa-solid fa-wave-square", level: 80 },
-  { name: "NgRx", icon: "fa-solid fa-layer-group", level: 78 },
   { name: "HTML5", icon: "fa-brands fa-html5", level: 95 },
-  { name: "CSS3", icon: "fa-brands fa-css3-alt", level: 92 },
-  { name: "SCSS", icon: "fa-brands fa-sass", level: 90 },
-  { name: "SQL", icon: "fa-brands fa-css3-alt", level: 82 },
+  { name: "CSS3", icon: "fa-brands fa-css3-alt", level: 95 },
+  { name: "SCSS", icon: "fa-brands fa-sass", level: 95 },
+  { name: "NodeJs", icon: "fa-brands fa-sass", level: 85 },
+  { name: "RxJS", icon: "fa-solid fa-diagram-project", level: 85 },
+  { name: "Signals", icon: "fa-solid fa-wave-square", level: 95 },
+  { name: "NgRx", icon: "fa-solid fa-layer-group", level: 85 },
+  
+  { name: "SQL", icon: "fa-brands fa-css3-alt", level: 75 },
   { name: "Bootstrap", icon: "fa-brands fa-bootstrap", level: 90 },
   { name: "Angular Material", icon: "fa-solid fa-gem", level: 85 },
-  { name: "REST API", icon: "fa-solid fa-plug", level: 88 },
-  { name: "Git", icon: "fa-brands fa-git-alt", level: 90 },
-  { name: "GitHub", icon: "fa-brands fa-github", level: 90 },
-  { name: "Responsive Design", icon: "fa-solid fa-mobile-screen", level: 93 },
-  { name: ".Net", icon: "fa-solid fa-mobile-screen", level: 60 },
-  { name: "GenAi", icon: "fa-solid fa-mobile-screen", level: 90 },
+  { name: "REST API", icon: "fa-solid fa-plug", level: 95 },
+  { name: "Git", icon: "fa-brands fa-git-alt", level: 95 },
+  { name: "GitHub", icon: "fa-brands fa-github", level: 95 },
+  { name: "Responsive Design", icon: "fa-solid fa-mobile-screen", level: 95 },
+  { name: ".Net", icon: "fa-solid fa-mobile-screen", level: 70 },
+  { name: "GenAi", icon: "fa-solid fa-mobile-screen", level: 95 },
+];
+
+
+
+export interface MainSkill extends Skill {
+  subSkills: Skill[];
+}
+
+export const MAIN_SKILLS: MainSkill[] = [
+  {
+    name: "Angular",
+    icon: "fa-brands fa-angular",
+    level: 95,
+    subSkills: [
+      { name: "TypeScript", icon: "fa-solid fa-code", level: 95 },
+      { name: "RxJS", icon: "fa-solid fa-diagram-project", level: 85 },
+      { name: "Signals", icon: "fa-solid fa-wave-square", level: 95 },
+      { name: "NgRx", icon: "fa-solid fa-layer-group", level: 85 },
+      { name: "Angular Material", icon: "fa-solid fa-gem", level: 85 },
+      { name: "REST API", icon: "fa-solid fa-plug", level: 95 }
+    ]
+  },
+
+  {
+    name: "React",
+    icon: "fa-brands fa-react",
+    level: 85,
+    subSkills: [
+      { name: "JSX", icon: "fa-solid fa-code", level: 90 },
+      { name: "React Hooks", icon: "fa-solid fa-code", level: 85 },
+      { name: "Redux", icon: "fa-solid fa-layer-group", level: 80 },
+      { name: "React Router", icon: "fa-solid fa-route", level: 85 },
+      { name: "Material UI", icon: "fa-solid fa-route", level: 85 }
+    ]
+  },
+
+  {
+    name: "JavaScript",
+    icon: "fa-brands fa-js",
+    level: 95,
+    subSkills: [
+      { name: "ES6+", icon: "fa-solid fa-code", level: 90 },
+      { name: "DOM", icon: "fa-solid fa-code", level: 85 },
+      { name: "Async / Await", icon: "fa-solid fa-clock", level: 90 },
+      { name: "Promises", icon: "fa-solid fa-code", level: 90 },
+      { name: "Events", icon: "fa-solid fa-code", level: 85 }
+    ]
+  },
+ {
+    name: "Node.js",
+    icon: "fa-brands fa-node-js",
+    level: 85,
+    subSkills: [
+      { name: "Express.js", icon: "fa-solid fa-server", level: 90 },
+      { name: "REST API", icon: "fa-solid fa-plug", level: 95 },
+      { name: "MongoDB", icon: "fa-solid fa-database", level: 85 },
+      { name: "Middleware", icon: "fa-solid fa-layer-group", level: 85 },
+      { name: "Authentication", icon: "fa-solid fa-lock", level: 80 }
+    ]
+  },
+  {
+    name: "SCSS",
+    icon: "fa-brands fa-sass",
+    level: 95,
+    subSkills: [
+      { name: "CSS3", icon: "fa-brands fa-css3-alt", level: 95 },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap", level: 90 },
+      { name: "Responsive Design", icon: "fa-solid fa-mobile-screen", level: 95 },
+       { name: "Variables & Mixins", icon: "fa-solid fa-code", level: 90 },
+    ]
+  },
+
+ 
+
+  {
+    name: "SQL",
+    icon: "fa-solid fa-database",
+    level: 85,
+    subSkills: [
+      { name: "MySQL", icon: "fa-solid fa-database", level: 80 },
+      { name: "Queries", icon: "fa-solid fa-code", level: 90 },
+      { name: "Joins", icon: "fa-solid fa-link", level: 85 },
+        { name: "Aggregations", icon: "fa-solid fa-chart-column", level: 80 },
+         { name: "DB Communication", icon: "fa-solid fa-database", level: 80 }
+    ]
+  },
+  {
+    name: "Ai",
+    icon: "fa-solid fa-robot",
+    level: 90,
+    subSkills: [
+      { name: "GitHub Copilot", icon: "fa-brands fa-github", level: 90 },
+      { name: "ChatGPT", icon: "fa-solid fa-comments", level: 95 },
+      { name: "Claude AI", icon: "fa-solid fa-robot", level: 90 },
+      { name: "Agentic AI", icon: "fa-solid fa-network-wired", level: 80 },
+      { name: "Prompt Engineering", icon: "fa-solid fa-terminal", level: 85 }
+    ]
+  },
+
+
+  {
+    name: "Git & Project Tools",
+    icon: "fa-brands fa-git-alt",
+    level: 95,
+    subSkills: [
+      { name: "Git", icon: "fa-brands fa-git-alt", level: 95 },
+      { name: "GitHub", icon: "fa-brands fa-github", level: 95 },
+      { name: "Jira", icon: "fa-solid fa-ticket", level: 85 },
+       { name: "Figma", icon: "fa-solid fa-ticket", level: 85 },
+       { name: "Code Review", icon: "fa-solid fa-code-branch", level: 90 }
+
+    ]
+  },
+  {
+    name: "UI Build Tools",
+    icon: "fa-brands fa-git-alt",
+    level: 95,
+    subSkills: [
+      { name: "Webpack", icon: "fa-brands fa-git-alt", level: 95 },
+      { name: "NPM", icon: "fa-brands fa-github", level: 95 },
+
+    ]
+  }
 ];
 
 export const EXPERIENCES: Experience[] = [
@@ -113,6 +238,17 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    id: 5,
+    name: "Hospozone — A Hospital & Clinic Management System",
+    description:
+      "A hospital and clinic management platform for patients, appointments, medical records, billing, and role-based operations.",
+    image: "./../../assets/projects-img/hospozone/home.png",
+    techStack: ["Angular", "nodejs", "TypeScript", "RxJS", "Bootstrap", "SCSS", "Claude AI"],
+    liveUrl: "https://hospozone-ui.vercel.app/",
+    githubUrl: "https://github.com/anaytrahman/hospozone-ui",
+    featured: true,
+  },
   {
     id: 1,
     name: "PromptToEdit - Get prompt to edit your photos",

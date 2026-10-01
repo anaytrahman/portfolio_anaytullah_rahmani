@@ -1,5 +1,5 @@
-@use '../../../styles/variables' as *;
-@use '../../../styles/mixins' as *;
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 
 .skills-section {
   background: $color-bg;
@@ -51,4 +51,6 @@
     width: 0;
     transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+ 
 }

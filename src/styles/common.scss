@@ -16,3 +16,30 @@
     }
   }
 }
+
+ .sub-skill {
+    font-weight: 500;
+    // padding: 2px 2px;
+    font-family: "Inter";
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    .sub-skill__name {
+      font-size: 14px;
+    }
+
+    .sub-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sub-skill-chip {
+      padding: 4px 11px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      font-size: 11px;
+      background: #f8f9fa;
+      margin: 3px;
+    }
+  }

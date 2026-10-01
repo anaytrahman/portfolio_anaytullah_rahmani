@@ -4,20 +4,41 @@
       <p class="section-eyebrow">What I Work With</p>
       <h2 class="section-title">Skills &amp; Technologies</h2>
       <p class="section-subtitle mx-auto text-center">
-        A snapshot of the tools and technologies I use to build production-grade frontend applications.
+        A snapshot of the tools and technologies I use to build production-grade
+        web applications.
       </p>
     </div>
 
     <div class="row g-4">
-      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let skill of skills" appScrollReveal>
+      <div
+        class="col-12 col-sm-6 col-lg-4"
+        *ngFor="let skill of skills"
+        appScrollReveal
+      >
         <div class="skill-card">
           <div class="skill-card__header">
             <span class="skill-card__icon"><i [class]="skill.icon"></i></span>
             <span class="skill-card__name">{{ skill.name }}</span>
             <span class="skill-card__percent">{{ skill.level }}%</span>
           </div>
+
+          <!-- <div class="sub-skill">
+            <span class="sub-skill__name">  {{ getSubSkillNames(skill.subSkills) }}</span>
+            
+          </div> -->
+          <div class="sub-skill">
+            <span
+              class="sub-skill-chip"
+              *ngFor="let subSkill of skill.subSkills"
+            >
+              {{ subSkill.name }}
+            </span>
+          </div>
           <div class="skill-card__bar">
-            <div class="skill-card__bar-fill" [style.width.%]="skill.level"></div>
+            <div
+              class="skill-card__bar-fill"
+              [style.width.%]="skill.level"
+            ></div>
           </div>
         </div>
       </div>

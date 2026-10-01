@@ -16,7 +16,8 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   private readonly roles = [
     "Frontend Developer",
-    "Angular / React Developer",
+    "Angular Developer",
+    "React Developer",
     "UI/UX Focused Engineer",
     "Performance Optimizer",
   ];
