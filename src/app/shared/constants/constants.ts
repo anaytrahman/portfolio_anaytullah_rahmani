@@ -1,5 +1,5 @@
 export const APP_FILES = {
-  RESUME: './../../assets/files/Anayt_Rahman_CV.pdf',
+  RESUME: './../../assets/files/Anayt_Rahman_Angular_CV.pdf',
   Name: "Anaytullah_Rahmani_Resume_Angular_4.6yrs.pdf",
 };
 
